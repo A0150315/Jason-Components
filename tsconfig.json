@@ -2,8 +2,11 @@
   "compilerOptions": {
     "outDir": "build",
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    // "allowJs": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -13,13 +16,21 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    // "isolatedModules": true,
-    "declaration": true,
     "jsx": "react",
     "sourceMap": true,
-    "typeRoots": ["node_modules/@types", "./src/typings"]
+    "typeRoots": [
+      "node_modules/@types",
+      "./src/typings"
+    ],
+    "allowJs": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
-  "include": ["src"],
+  "include": [
+    "src"
+  ],
   "extends": "./tsconfig.paths.json",
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

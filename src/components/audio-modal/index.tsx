@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState, useRef, useCallback, useMemo } from 'react'
 import classNames from 'classnames';
-import styles from './modal.module.scss'
+import styles from './index.module.scss'
 
 type ModalProps = {
     onClose: () => void

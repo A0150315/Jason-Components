@@ -1,6 +1,6 @@
 import React, { memo, useCallback } from 'react'
 import ReactDOM from 'react-dom';
-import Modal from './modal'
+import Modal from '../audio-modal'
 
 const Audio = memo<{ src?: string, children?: React.ReactNode, className?: string }>(function Audio(props) {
     const { children, className, ...restProps } = props;
