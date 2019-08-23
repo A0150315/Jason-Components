@@ -1,0 +1,9 @@
+src/
+scripts/
+public/
+
+.env
+global.d.ts
+rollup.config.js
+tsconfig.json
+tsconfig.paths.json
