@@ -1,30 +1,25 @@
 {
   "compilerOptions": {
+    "outDir": "build",
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    // "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
+    // "isolatedModules": true,
+    "declaration": true,
     "jsx": "react",
-    "typeRoots": [
-      "node_modules/@types",
-      "./src/typings"
-    ]
+    "sourceMap": true,
+    "typeRoots": ["node_modules/@types", "./src/typings"]
   },
-  "include": [
-    "src"
-  ],
-  "extends": "./tsconfig.paths.json"
+  "include": ["src"],
+  "extends": "./tsconfig.paths.json",
+  "exclude": ["node_modules"]
 }

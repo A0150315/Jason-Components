@@ -19,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "publish:npm": "tsc"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "@types/classnames": "^2.2.9"
+    "@types/classnames": "^2.2.9",
+    "babel-cli": "^6.26.0"
   }
 }
