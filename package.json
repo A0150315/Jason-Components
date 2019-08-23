@@ -1,24 +1,13 @@
 {
   "name": "tjq-components",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Jason-Tan",
   "main": "es/components",
   "dependencies": {
-    "@types/jest": "24.0.18",
-    "@types/node": "12.7.2",
-    "@types/react": "16.9.2",
-    "@types/react-dom": "16.9.0",
     "classnames": "^2.2.6",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1",
-    "rollup-plugin-commonjs": "^10.0.2",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-postcss": "^2.0.3",
-    "rollup-plugin-typescript2": "^0.23.0",
-    "tslib": "^1.10.0",
-    "typescript": "3.5.3"
+    "react-dom": "^16.9.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -44,6 +33,17 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "24.0.18",
+    "@types/node": "12.7.2",
+    "@types/react": "16.9.2",
+    "@types/react-dom": "16.9.0",
+    "react-scripts": "3.1.1",
+    "rollup-plugin-commonjs": "^10.0.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-typescript2": "^0.23.0",
+    "tslib": "^1.10.0",
+    "typescript": "3.5.3",
     "@types/classnames": "^2.2.9",
     "babel-cli": "^6.26.0",
     "rollup": "^1.20.1"
