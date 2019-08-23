@@ -20,6 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "build:lib": "rollup scripts/build.js -o bundle.js -f cjs",
     "publish:npm": "tsc"
   },
   "eslintConfig": {
@@ -39,6 +40,7 @@
   },
   "devDependencies": {
     "@types/classnames": "^2.2.9",
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "rollup": "^1.20.1"
   }
 }
