@@ -1,8 +1,8 @@
 {
   "name": "tjq-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Jason-Tan",
-  "main": "es/components/index.ts",
+  "main": "es/components",
   "dependencies": {
     "@types/jest": "24.0.18",
     "@types/node": "12.7.2",
