@@ -1,6 +1,7 @@
 src/
 scripts/
 public/
+.rpt2_cache/
 
 .env
 global.d.ts
