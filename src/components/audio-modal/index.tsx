@@ -1,55 +1,62 @@
-import React, { FC, useEffect, useState, useRef, useCallback, useMemo } from 'react'
-import classNames from 'classnames';
-import styles from './index.module.scss'
+import React, {
+  FC,
+  useEffect,
+  useState,
+  useRef,
+  useCallback,
+  useMemo
+} from "react";
+import classNames from "classnames";
+import styles from "./index.module.scss";
 
 type ModalProps = {
-    onClose: () => void
-    src?: string
-}
+  onClose: () => void;
+  src?: string;
+};
 
-const Modal: FC<ModalProps> = (props) => {
-    const { onClose, src } = props
+const Modal: FC<ModalProps> = props => {
+  const { onClose, src } = props;
 
-    const [opacity, setOpacity] = useState(0)
+  const [opacity, setOpacity] = useState(0);
 
-    const audioEl = useRef<HTMLAudioElement>(null);
+  const audioEl = useRef<HTMLAudioElement>(null);
 
-    const maskHandler = useCallback(
-        () => {
-            setOpacity(0)
-            setTimeout(
-                onClose
-                , 200)
-        },
-        [onClose]
-    )
+  const maskHandler = useCallback(() => {
+    setOpacity(0);
+    setTimeout(onClose, 200);
+  }, [onClose]);
 
-    const audioHandler = useCallback(
-        () => {
-            if (audioEl.current) audioEl.current.play()
-        },
-        [],
-    )
+  const audioHandler = useCallback(() => {
+    if (audioEl.current) audioEl.current.play();
+  }, []);
 
-
-    const audioStyles = useMemo(() => classNames(styles.audio, {
+  const audioStyles = useMemo(
+    () =>
+      classNames(styles.audio, {
         [styles.audio_show]: opacity
-    }), [opacity])
+      }),
+    [opacity]
+  );
 
+  useEffect(() => {
+    setOpacity(1);
+  }, []);
 
+  return (
+    <>
+      <div className={styles.mask} style={{ opacity }} onClick={maskHandler} />
+      <audio
+        ref={audioEl}
+        style={{ display: "block" }}
+        controls
+        className={audioStyles}
+        onCanPlay={audioHandler}
+      >
+        <source src={src} />
+        <track kind="captions" />
+      </audio>
+    </>
+  );
+};
 
-    useEffect(() => {
-        setOpacity(1)
-    }, [])
-
-    return (
-        <>
-            <div className={styles.mask} style={{ opacity: opacity }} onClick={maskHandler} />
-            <audio ref={audioEl} style={{ display: 'block' }} controls className={audioStyles} onCanPlay={audioHandler}>
-                <source src={src} />
-            </audio>
-        </>
-    )
-}
-
-export default Modal
+export default Modal;

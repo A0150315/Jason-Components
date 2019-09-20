@@ -2,9 +2,14 @@ src/
 scripts/
 public/
 .rpt2_cache/
+gifs/
 
 .env
 global.d.ts
 rollup.config.js
 tsconfig.json
 tsconfig.paths.json
+.eslintignore
+.eslintrc
+.stylelintrc.json
+package-lock.json

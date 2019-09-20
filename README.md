@@ -21,9 +21,9 @@ import { Audio } from 'src/components'
 
 **API**:
 
-| 属性 | 说明 | 类型 | 默认值 |
-| ---- | ---- | ---- | ---- |
-| src | 音频的资源路径 | string | - |
+| 属性 | 说明           | 类型   | 默认值 |
+| ---- | -------------- | ------ | ------ |
+| src  | 音频的资源路径 | string | -      |
 
 ## Available Scripts
 
