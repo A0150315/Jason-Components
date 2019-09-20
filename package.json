@@ -1,25 +1,59 @@
 {
   "name": "tjq-components",
-  "version": "1.0.6",
+  "title": "Jason Components",
+  "version": "1.0.7",
   "author": "Jason-Tan",
+  "description": "React components",
+  "keywords": [
+    "component",
+    "components",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
   "main": "es/components",
   "dependencies": {
+    "@types/react-router-dom": "^4.3.5",
     "classnames": "^2.2.6",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1"
   },
+  "bugs": {
+    "url": "https://github.com/A0150315/Jason-Components/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/A0150315/Jason-Components"
+  },
+  "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:lib": "rollup -c",
-    "publish:npm": "tsc"
+    "pretty-quick": "pretty-quick",
+    "lint": "npm run lint:tsc && npm run lint:script && npm run lint:demo && npm run lint:style",
+    "lint-fix": "npm run lint-fix:script && npm run lint-fix:demo && npm run lint-fix:style",
+    "lint-fix:demo": "eslint-tinker ./src/**/*.md",
+    "lint-fix:script": "npm run lint:script -- --fix",
+    "lint-fix:style": "npm run lint:style -- --fix",
+    "lint:demo": "cross-env RUN_ENV=DEMO eslint src/demo/**/*.tsx --ext '.tsx'",
+    "lint:md": "remark components/",
+    "lint:script": "eslint --ext .js,.jsx,.ts,.tsx src/ ",
+    "lint:style": "stylelint src/demo/**/*.scss --syntax scss",
+    "lint:tsc": "npm run tsc",
+    "tsc": "tsc"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "files": [
+    "es"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
@@ -33,19 +67,43 @@
     ]
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.9",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.2",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.3.0",
+    "@typescript-eslint/parser": "^2.3.0",
+    "babel-cli": "^6.26.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-markdown": "^1.0.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-tinker": "^0.5.0",
+    "husky": "^3.0.5",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
     "react-scripts": "3.1.1",
+    "rollup": "^1.20.1",
     "rollup-plugin-commonjs": "^10.0.2",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-typescript2": "^0.23.0",
+    "stylelint": "^11.0.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.1.0",
+    "stylelint-order": "^3.1.1",
     "tslib": "^1.10.0",
-    "typescript": "3.5.3",
-    "@types/classnames": "^2.2.9",
-    "babel-cli": "^6.26.0",
-    "rollup": "^1.20.1"
+    "typescript": "3.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }

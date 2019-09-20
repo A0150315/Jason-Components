@@ -1,1 +1,2 @@
-export { default as Audio } from './audio-player';
+/* eslint-disable import/prefer-default-export */
+export { default as Audio } from "./audio-player";
