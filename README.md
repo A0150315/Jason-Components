@@ -20,9 +20,10 @@ import { Audio } from 'src/components'
 ![image](./gifs/audio.gif)
 
 **API**:
-| 属性 | 说明 | 类型 | 默认值
-| --- | --- | --- | ---
-| src | 音频的资源路径 | string | -
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| src | 音频的资源路径 | string | - |
 
 ## Available Scripts
 
