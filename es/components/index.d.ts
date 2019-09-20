@@ -1,1 +1,1 @@
-export { default as Audio } from './audio-player';
+export { default as Audio } from "./audio-player";
