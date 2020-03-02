@@ -99,7 +99,7 @@
     "stylelint-declaration-block-no-ignored-properties": "^2.1.0",
     "stylelint-order": "^3.1.1",
     "tslib": "^1.10.0",
-    "typescript": "3.5.3"
+    "typescript": "3.8.3"
   },
   "husky": {
     "hooks": {
